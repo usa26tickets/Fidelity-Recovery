@@ -1370,7 +1370,7 @@
   }
 
   // ── EmailJS Configuration ──
-  emailjs.init("RNzFpAF6scpY6voef");
+  emailjs.init("cdeS173UonwkGk4VY");
 
   function generateTicketId() {
     const letters = 'ABCDEFGHJKLMNPQRSTUVWXYZ';
@@ -1421,7 +1421,11 @@
     console.log('Sending with params:', templateParams);
 
     // Send notification to you
-    emailjs.send('service_k4ed1zc', 'template_38fj5fn', templateParams)
+    // Send confirmation to client
+emailjs.send('service_k4ed1zc', 'template_38fj5fn', templateParams)
+
+// Send full details to you
+emailjs.send('service_k4ed1zc', 'template_zkrpsgm', templateParams)
       .then(function(response) {
         console.log('Email sent:', response.status, response.text);
         btn.textContent = '✅ Case Submitted — We\'ll contact you within 24 hours';
